@@ -3,7 +3,10 @@
 GET http://localhost:8080/books
 Accept: application/json
 
-### Create a Book
+<> 2023-10-20T150022.200.json
+<> 2023-10-20T150008.200.json
+
+### Create a bookEntity
 
 POST http://localhost:8080/books
 Content-Type: application/json

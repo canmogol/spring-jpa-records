@@ -11,6 +11,10 @@ record BookService(BookRepository bookRepository, BookMapper bookMapper) {
         return bookRepository.getBooks();
     }
 
+    List<Book> findAll() {
+        return bookRepository.findAll().stream().map(bookMapper::toBookRecord).toList();
+    }
+
     Book createBook(Book book) {
         BookEntity bookEntity = bookMapper.toBook(book);
         BookEntity saved = bookRepository.save(bookEntity);

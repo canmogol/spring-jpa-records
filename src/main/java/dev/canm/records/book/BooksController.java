@@ -15,6 +15,12 @@ public record BooksController(BookService bookService) {
         return bookService.getBooks();
     }
 
+
+    @GetMapping("/all")
+    List<Book> getAll() {
+        return bookService.findAll();
+    }
+
     @PostMapping
     ResponseEntity<Void> createBook(@RequestBody Book book) {
         Book createdBook = bookService.createBook(book);
