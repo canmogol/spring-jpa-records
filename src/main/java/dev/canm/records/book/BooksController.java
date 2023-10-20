@@ -15,7 +15,6 @@ public record BooksController(BookService bookService) {
         return bookService.getBooks();
     }
 
-
     @GetMapping("/all")
     List<Book> getAll() {
         return bookService.findAll();
